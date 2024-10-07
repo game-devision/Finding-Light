@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Attack
   - PlayerCheck
+  - gameManager
   layers:
   - Default
   - TransparentFX

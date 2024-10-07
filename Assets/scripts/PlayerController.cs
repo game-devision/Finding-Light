@@ -25,10 +25,13 @@ public class PlayerController : MonoBehaviour
     public Transform ShootPoint;
     public GameObject bullet;
     bool IsShooting = false;
+    public GameObject trail;
 
     void Start(){
         rb = GetComponent<Rigidbody2D>();
         Attack.SetActive(false);    
+        trail.SetActive(false);
+        
         
     }
     void Update()
@@ -66,10 +69,12 @@ public class PlayerController : MonoBehaviour
     IEnumerator Dash(){
         if (!DashCoolDown && IsGrounded){
             print("Dash");
+            trail.SetActive(true);         
             DashCoolDown = true;
             isDashing = true;
             yield return new WaitForSeconds(0.3f);
             isDashing = false;
+            trail.SetActive(false);
             yield return new WaitForSeconds(0.7f);    
             DashCoolDown = false;
             
@@ -100,11 +105,12 @@ public class PlayerController : MonoBehaviour
         if (Dir && horizontal < 0f || !Dir && horizontal > 0f){
             Dir = !Dir;
             transform.Rotate(0,180, 0);
+            Attack.SetActive(false);
             /*
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
-            Attack.SetActive(false);
+            
             */
         }
     }

@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 8344516339036433848}
+  player: {fileID: 0}
 --- !u!1 &885682414357365656
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +193,7 @@ MonoBehaviour:
   damage: 30
   isPlayer: 0
   Player: {fileID: 0}
+  isBullet: 0
 --- !u!61 &7964341264628339678
 BoxCollider2D:
   m_ObjectHideFlags: 0
