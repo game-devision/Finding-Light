@@ -7,6 +7,9 @@ public class NPC : MonoBehaviour
     public UnityEvent Interact;
     public Dialouge dialouge;
     public GameObject DialougeManager;
+    
+
+    
     public void TriggerDialouge(){
         FindObjectOfType<DialougeManager>().StartDialouge(dialouge);
     }

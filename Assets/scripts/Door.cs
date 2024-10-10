@@ -11,7 +11,7 @@ public class Door : MonoBehaviour
     public Vector2 playerPos;
     public GameObject gameManager;
     void Start(){
-        gameManager = GameObject.FindGameObjectWithTag("gameManager");
+        gameManager = GameObject.FindGameObjectWithTag("gameManager");  
     }
     void OnTriggerStay2D(Collider2D other){
         if(other.CompareTag("Player")){

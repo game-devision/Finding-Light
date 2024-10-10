@@ -13,6 +13,7 @@ public class DialougeManager : MonoBehaviour
     public GameObject DialougeBox;
     public TMP_Text Name2;
     public TMP_Text sentencestenence2;
+    GameObject pauseMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class DialougeManager : MonoBehaviour
         Name2 = Name.GetComponent<TMP_Text>(); 
         sentencestenence2 = sentencestenence.GetComponent<TMP_Text>(); 
         DialougeBox.SetActive(false);
+        pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
     }
     void Update(){
         if(IsSpeaking){
@@ -41,6 +43,7 @@ public class DialougeManager : MonoBehaviour
         }
         Invoke("DisplayNextSentence", 0.1f);
         Time.timeScale = 0f;
+        pauseMenu.SetActive(false);
 
     }
     public void DisplayNextSentence(){
@@ -55,6 +58,7 @@ public class DialougeManager : MonoBehaviour
     void EndDialouge(){
         DialougeBox.SetActive(false);
         Debug.Log("They stopped yapping");  
-        Time.timeScale = 1f;   
+        Time.timeScale = 1f;
+        pauseMenu.SetActive(true);
     }
 }

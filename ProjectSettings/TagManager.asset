@@ -10,6 +10,7 @@ TagManager:
   - Attack
   - PlayerCheck
   - gameManager
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
