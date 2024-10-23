@@ -78,7 +78,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021256626, y: 0.24102306}
+  m_Offset: {x: -0.007162094, y: 0.3665812}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -89,7 +89,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.74492204, y: 0.5179539}
+  m_Size: {x: 0.54006577, y: 0.2668376}
   m_EdgeRadius: 0
 --- !u!1 &3684702405947442516
 GameObject:
@@ -448,10 +448,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8644687757329464615}
   - {fileID: 4623041033010152565}
   - {fileID: 7058866985585361341}
   - {fileID: 3872740123859519681}
+  - {fileID: 8644687757329464615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7748777442619574459
@@ -580,6 +580,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ecec8b14a8580f289c6128467699f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SlopeCheckDistance: 0.5
+  rb: {fileID: 0}
   IsGrounded: 1
   groundCheck: {fileID: 3369377463439540163}
   Attack: {fileID: 7188445170783162393}
@@ -590,6 +592,10 @@ MonoBehaviour:
   ShootPoint: {fileID: 7058866985585361341}
   bullet: {fileID: 2934587052885016356, guid: 240645845a059a5f08f6d86e638bb23b, type: 3}
   trail: {fileID: 3684702405947442516}
+  _movementLock: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &3970137060560291432
 MonoBehaviour:
   m_ObjectHideFlags: 0

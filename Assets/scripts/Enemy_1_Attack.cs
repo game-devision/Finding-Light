@@ -5,6 +5,9 @@ public class Enemy_1_Attack : MonoBehaviour
 {
     [SerializeField] GameObject Enemy;
     [SerializeField] GameObject player;
+    void Start(){
+        player = GameObject.FindWithTag("Player");
+    }
     void OnTriggerEnter2D(Collider2D other){
         
         if(other.CompareTag("Player")&& player.GetComponent<PlayerController>().isDashing == false){

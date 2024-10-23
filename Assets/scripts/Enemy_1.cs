@@ -22,10 +22,11 @@ public class Enemy_1 : MonoBehaviour
     {
         Attack.SetActive(false);
         rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player");  
     }
     void Update()
     {
-    RaycastHit2D LoS = Physics2D.Raycast(transform.position, PlayerDir, 100f, ~layerMask);
+    RaycastHit2D LoS = Physics2D.Raycast(transform.position, PlayerDir, 20f, ~layerMask);
     if(LoS.collider != null){
         hasLoS = LoS.collider.CompareTag("Player");
 

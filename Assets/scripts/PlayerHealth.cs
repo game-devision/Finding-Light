@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-
+using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth;
@@ -52,6 +52,8 @@ public class PlayerHealth : MonoBehaviour
             if(this.CompareTag("Enemy")){
                 Destroy(this.gameObject);
             }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
         }
         if (timer > 0){
             timer -= Time.deltaTime;
